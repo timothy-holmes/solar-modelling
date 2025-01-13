@@ -1,0 +1,52 @@
+{
+  "module_parameters": {
+        'celltype': 'monoSi', # technology
+        # 'STC': 440, # STC power
+        # 'PTC': 440 * 0.875, # PTC power
+        'v_mp': 32.47, # Maximum power voltage
+        'i_mp': 13.55, # Maximum power current
+        'v_oc': 38.9, # Open-circuit voltage
+        'i_sc':   14.31, # Short-circuit current
+        'alpha_sc': 0.046 / 100 * 14.31, # Temperature Coeff. Short Circuit Current [A/C]
+        'beta_voc': -0.26 / 100 * 38.9, # Temperature Coeff. Open Circuit Voltage [V/C]
+        'gamma_pmp': -0.300, # Temperature coefficient of power at maximum point [%/C]
+        'cells_in_series': 108, # Number of cells in series
+        'temp_ref': 25 # Reference temperature conditions
+    },
+    "inverter_parameters": {
+       'pdc0': 8000, # W
+       'eta_inv': 0.98, # %
+       'mppt_low': 30,
+       'mppt_high': 600,
+    },
+    array_parameters: [
+        {
+            "mount_surface_tilt": 22.5,
+            "mount_surface_azimuth": 6,
+            "modules_per_string": 8,
+            "strings": 1
+        },
+        {
+            "mount_surface_tilt": 22.5,
+            "mount_surface_azimuth": 276,
+            "modules_per_string": 6,
+            "strings": 1
+        },
+        {
+            "mount_surface_tilt": 22.5,
+            "mount_surface_azimuth": 36,
+            "modules_per_string": 9,
+            "strings": 1
+        }
+    ],
+    location: {
+        latitude: -37.4627,
+        longitude: 144.6767,
+        altitude: 400,
+        tz: 'Australia\Melbourne'
+    },
+    "model_chain_parameters: {
+        "aoi_model": "no_loss",
+        "spectral_model": "no_loss"
+    }
+}
